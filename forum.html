@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum — Scramblox</title>
+    <meta name="description" content="Join the Scramblox community. Share tips, strategies, and connect with fellow word scramble enthusiasts.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-icon">🎯</span>
+            <div class="brand-text"><h2>Scramblox</h2><span class="brand-sub">Vocabulary Battle Hub</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span></a>
+            <a href="play.html" class="nav-item"><span class="nav-icon">⚔️</span><span class="nav-label">Solo Challenge</span></a>
+            <a href="duel.html" class="nav-item"><span class="nav-icon">🎮</span><span class="nav-label">Duel Mode</span></a>
+            <a href="leaderboard.html" class="nav-item"><span class="nav-icon">🏆</span><span class="nav-label">Leaderboard</span></a>
+            <a href="achievements.html" class="nav-item"><span class="nav-icon">🎖️</span><span class="nav-label">Achievements</span></a>
+            <a href="forum.html" class="nav-item active"><span class="nav-icon">💬</span><span class="nav-label">Community Forum</span></a>
+            <a href="settings.html" class="nav-item"><span class="nav-icon">⚙️</span><span class="nav-label">Settings</span></a>
+            <a href="premium.html" class="nav-item nav-premium"><span class="nav-icon">👑</span><span class="nav-label">Premium Access</span></a>
+        </nav>
+        <div class="sidebar-user">
+            <div class="user-avatar">G</div>
+            <div class="user-info"><span class="user-name">Guest Challenger</span><span class="user-rank">🥉 Bronze Tier</span></div>
+        </div>
+    </aside>
+    <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1 class="page-title">💬 Community Forum</h1>
+            <p class="page-subtitle">Share strategies, celebrate wins, and connect with fellow challengers</p>
+        </section>
+
+        <!-- New Post -->
+        <section id="forum" class="section">
+            <h2 class="section-title">Create a Post</h2>
+            <div class="forum-compose">
+                <div class="forum-compose-header">
+                    <div class="forum-compose-avatar">G</div>
+                    <span class="forum-compose-name">Guest Challenger</span>
+                </div>
+                <textarea id="forum-input" placeholder="Share a tip, ask a question, or celebrate a win..."></textarea>
+                <div class="forum-compose-actions">
+                    <div class="forum-tags">
+                        <span class="forum-tag">💡 Tip</span>
+                        <span class="forum-tag">❓ Question</span>
+                        <span class="forum-tag">🎉 Celebration</span>
+                    </div>
+                    <button id="post-btn">Post</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forum Threads -->
+        <section class="section">
+            <h2 class="section-title">Recent Discussions</h2>
+            <div id="comment-list" class="forum-threads">
+
+                <div class="forum-thread">
+                    <div class="thread-header">
+                        <div class="thread-avatar" style="background: linear-gradient(135deg, #f0c060, #e88040);">W</div>
+                        <div class="thread-meta">
+                            <span class="thread-author">WordMaster99 <span class="thread-tier">💎 Diamond</span></span>
+                            <span class="thread-time">25 min ago</span>
+                        </div>
+                        <span class="thread-tag tag-tip">💡 Tip</span>
+                    </div>
+                    <p class="thread-body">Pro tip: Focus on common letter patterns first. Look for prefixes like "un-", "re-", and suffixes like "-tion", "-ing". This cuts solve time by 40%!</p>
+                    <div class="thread-footer">
+                        <button class="thread-action">👍 24</button>
+                        <button class="thread-action">💬 8 replies</button>
+                        <button class="thread-action">🔖 Save</button>
+                    </div>
+                </div>
+
+                <div class="forum-thread">
+                    <div class="thread-header">
+                        <div class="thread-avatar" style="background: linear-gradient(135deg, #60a0e0, #a060c0);">V</div>
+                        <div class="thread-meta">
+                            <span class="thread-author">VocabNinja <span class="thread-tier">🥇 Gold</span></span>
+                            <span class="thread-time">1 hour ago</span>
+                        </div>
+                        <span class="thread-tag tag-celebration">🎉 Celebration</span>
+                    </div>
+                    <p class="thread-body">Just hit a 15-word streak on Hard mode! 🔥 The key was staying calm and not panicking when the timer gets low. Anyone else broken their personal records lately?</p>
+                    <div class="thread-footer">
+                        <button class="thread-action">👍 42</button>
+                        <button class="thread-action">💬 15 replies</button>
+                        <button class="thread-action">🔖 Save</button>
+                    </div>
+                </div>
+
+                <div class="forum-thread">
+                    <div class="thread-header">
+                        <div class="thread-avatar" style="background: linear-gradient(135deg, #c8507a, #e0809e);">A</div>
+                        <div class="thread-meta">
+                            <span class="thread-author">AnagramAce <span class="thread-tier">🥈 Silver</span></span>
+                            <span class="thread-time">3 hours ago</span>
+                        </div>
+                        <span class="thread-tag tag-question">❓ Question</span>
+                    </div>
+                    <p class="thread-body">Does anyone know if there's a word list for the Hard difficulty? I keep getting stuck on scientific terms. Would love to practice offline!</p>
+                    <div class="thread-footer">
+                        <button class="thread-action">👍 11</button>
+                        <button class="thread-action">💬 6 replies</button>
+                        <button class="thread-action">🔖 Save</button>
+                    </div>
+                </div>
+
+                <div class="forum-thread">
+                    <div class="thread-header">
+                        <div class="thread-avatar" style="background: linear-gradient(135deg, #80d8a0, #60a0e0);">P</div>
+                        <div class="thread-meta">
+                            <span class="thread-author">PuzzlePro <span class="thread-tier">🥉 Bronze</span></span>
+                            <span class="thread-time">5 hours ago</span>
+                        </div>
+                        <span class="thread-tag tag-tip">💡 Tip</span>
+                    </div>
+                    <p class="thread-body">For beginners: start with Easy mode and focus on building speed. Don't jump to Hard right away — the muscle memory from Easy mode carries over beautifully!</p>
+                    <div class="thread-footer">
+                        <button class="thread-action">👍 33</button>
+                        <button class="thread-action">💬 12 replies</button>
+                        <button class="thread-action">🔖 Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

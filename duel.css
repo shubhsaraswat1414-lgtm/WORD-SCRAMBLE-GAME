@@ -1,0 +1,146 @@
+/* ============================================
+   DUEL PAGE
+   ============================================ */
+.duel-arena {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.duel-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.duel-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rose), var(--accent-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    border: 3px solid rgba(224, 160, 192, 0.2);
+}
+
+.opponent-avatar {
+    background: linear-gradient(135deg, var(--accent), #444) !important;
+    opacity: 0.6;
+}
+
+.duel-name { font-weight: 700; font-size: 1.1rem; color: var(--text-primary); }
+.duel-rank { font-size: 0.8rem; color: var(--text-muted); }
+
+.duel-score-display {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-2);
+    text-shadow: 0 0 20px rgba(96, 160, 224, 0.3);
+}
+
+.duel-vs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.vs-text {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--rose), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vs-pulse {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--rose-glow), transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.btn-large {
+    font-size: 1.15rem;
+    padding: 1rem 2.5rem;
+    margin-top: 1rem;
+}
+
+/* Duel History */
+.duel-history { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.duel-record {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(224, 160, 192, 0.06);
+    transition: background var(--transition);
+}
+
+.duel-record:hover { background: rgba(200, 80, 122, 0.08); }
+.duel-record-info { flex: 1; display: flex; flex-direction: column; gap: 0.15rem; }
+.duel-record-opponent { font-weight: 600; color: var(--text-primary); }
+.duel-record-score { font-size: 0.85rem; color: var(--text-muted); }
+.duel-record-result { font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.duel-record-time { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+
+.duel-victory { border-left: 3px solid var(--green); }
+.duel-victory .duel-record-result { color: var(--green); }
+.duel-defeat { border-left: 3px solid var(--red); }
+.duel-defeat .duel-record-result { color: var(--red); }
+.duel-draw { border-left: 3px solid var(--gold); }
+.duel-draw .duel-record-result { color: var(--gold); }
+
+
+@media (min-width: 1024px) {
+    .duel-matchmaking {
+        max-width: 700px;
+    }
+    .duel-arena {
+        gap: 3rem;
+    }
+}
+
+/* Responsive — 768px */
+@media (max-width: 768px) {
+    .duel-arena { gap: 1rem; }
+    .duel-avatar { width: 60px; height: 60px; font-size: 1.5rem; }
+    .vs-text { font-size: 1.8rem; }
+    .duel-name { font-size: 0.95rem; }
+    .duel-score-display { font-size: 1.5rem; }
+    .duel-record { gap: 0.75rem; padding: 0.8rem 1rem; }
+    .btn-large { padding: 0.85rem 2rem; font-size: 1rem; }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .duel-arena { flex-direction: column; gap: 0.75rem; }
+    .duel-avatar { width: 50px; height: 50px; font-size: 1.3rem; }
+    .vs-text { font-size: 1.5rem; }
+    .vs-pulse { width: 45px; height: 45px; }
+    .duel-record { flex-wrap: wrap; }
+    .duel-record-time { width: 100%; text-align: right; margin-top: 0.25rem; }
+}

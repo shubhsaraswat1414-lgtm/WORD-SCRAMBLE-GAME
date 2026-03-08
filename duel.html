@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duel Mode — Scramblox</title>
+    <meta name="description" content="Challenge other players in real-time word scramble duels. Prove you're the fastest unscrambler.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="duel.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-icon">🎯</span>
+            <div class="brand-text"><h2>Scramblox</h2><span class="brand-sub">Vocabulary Battle Hub</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span></a>
+            <a href="play.html" class="nav-item"><span class="nav-icon">⚔️</span><span class="nav-label">Solo Challenge</span></a>
+            <a href="duel.html" class="nav-item active"><span class="nav-icon">🎮</span><span class="nav-label">Duel Mode</span></a>
+            <a href="leaderboard.html" class="nav-item"><span class="nav-icon">🏆</span><span class="nav-label">Leaderboard</span></a>
+            <a href="achievements.html" class="nav-item"><span class="nav-icon">🎖️</span><span class="nav-label">Achievements</span></a>
+            <a href="forum.html" class="nav-item"><span class="nav-icon">💬</span><span class="nav-label">Community Forum</span></a>
+            <a href="settings.html" class="nav-item"><span class="nav-icon">⚙️</span><span class="nav-label">Settings</span></a>
+            <a href="premium.html" class="nav-item nav-premium"><span class="nav-icon">👑</span><span class="nav-label">Premium Access</span></a>
+        </nav>
+        <div class="sidebar-user">
+            <div class="user-avatar">G</div>
+            <div class="user-info"><span class="user-name">Guest Challenger</span><span class="user-rank">🥉 Bronze Tier</span></div>
+        </div>
+    </aside>
+    <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1 class="page-title">🎮 Duel Mode</h1>
+            <p class="page-subtitle">Challenge players head-to-head in real-time word battles</p>
+        </section>
+
+        <!-- Matchmaking -->
+        <div class="section duel-matchmaking">
+            <h2 class="section-title">Find a Match</h2>
+            <div class="duel-arena">
+                <div class="duel-player duel-you">
+                    <div class="duel-avatar">G</div>
+                    <span class="duel-name">You</span>
+                    <span class="duel-rank">🥉 Bronze</span>
+                    <div class="duel-score-display">0</div>
+                </div>
+
+                <div class="duel-vs">
+                    <span class="vs-text">VS</span>
+                    <div class="vs-pulse"></div>
+                </div>
+
+                <div class="duel-player duel-opponent">
+                    <div class="duel-avatar opponent-avatar">?</div>
+                    <span class="duel-name">Waiting...</span>
+                    <span class="duel-rank">Searching</span>
+                    <div class="duel-score-display">0</div>
+                </div>
+            </div>
+            <button id="find-match-btn" class="btn-large">🔍 Find Opponent</button>
+        </div>
+
+        <!-- Duel History -->
+        <section class="section">
+            <h2 class="section-title">Duel History</h2>
+            <div class="duel-history">
+                <div class="duel-record duel-victory">
+                    <div class="duel-record-info">
+                        <span class="duel-record-opponent">vs WordMaster99</span>
+                        <span class="duel-record-score">5 — 3</span>
+                    </div>
+                    <span class="duel-record-result">🏆 Victory</span>
+                    <span class="duel-record-time">1 hour ago</span>
+                </div>
+                <div class="duel-record duel-defeat">
+                    <div class="duel-record-info">
+                        <span class="duel-record-opponent">vs ScrabbleKing</span>
+                        <span class="duel-record-score">2 — 5</span>
+                    </div>
+                    <span class="duel-record-result">💔 Defeat</span>
+                    <span class="duel-record-time">3 hours ago</span>
+                </div>
+                <div class="duel-record duel-victory">
+                    <div class="duel-record-info">
+                        <span class="duel-record-opponent">vs VocabNinja</span>
+                        <span class="duel-record-score">4 — 2</span>
+                    </div>
+                    <span class="duel-record-result">🏆 Victory</span>
+                    <span class="duel-record-time">Yesterday</span>
+                </div>
+                <div class="duel-record duel-draw">
+                    <div class="duel-record-info">
+                        <span class="duel-record-opponent">vs LetterStorm</span>
+                        <span class="duel-record-score">3 — 3</span>
+                    </div>
+                    <span class="duel-record-result">🤝 Draw</span>
+                    <span class="duel-record-time">2 days ago</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

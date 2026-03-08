@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scramblox — Dashboard</title>
+    <meta name="description" content="Scramblox Dashboard — Your vocabulary battle hub. Track stats, climb ranks, and start your word scramble journey.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Fixed Top Nav -->
+    <nav class="top-nav">
+        <a href="index.html" class="top-nav-link">
+            <span class="top-nav-icon">�</span>
+            <span>Dashboard</span>
+        </a>
+        <a href="play.html" class="top-nav-link">
+            <span class="top-nav-icon">⚔️</span>
+            <span>Play</span>
+        </a>
+        <a href="leaderboard.html" class="top-nav-link">
+            <span class="top-nav-icon">🏆</span>
+            <span>Leaderboard</span>
+        </a>
+        <a href="achievements.html" class="top-nav-link">
+            <span class="top-nav-icon">🎖️</span>
+            <span>Achievements</span>
+        </a>
+        <a href="forum.html" class="top-nav-link">
+            <span class="top-nav-icon">💬</span>
+            <span>Community</span>
+        </a>
+        <a href="settings.html" class="top-nav-link">
+            <span class="top-nav-icon">⚙️</span>
+            <span>Settings</span>
+        </a>
+        <a href="premium.html" class="top-nav-link top-nav-premium">
+            <span class="top-nav-icon">👑</span>
+            <span>Premium</span>
+        </a>
+    </nav>
+
+    <!-- Particles Cursor Canvas Container -->
+    <div id="particles-cursor"></div>
+
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+        <!-- Home / Dashboard Hero -->
+        <div id="home" class="section">
+
+            <!-- Deep atmospheric background -->
+            <div class="hero-gradient"></div>
+
+            <!-- Dramatic light beam from above -->
+            <div class="hero-lightbeam" aria-hidden="true"></div>
+
+            <!-- Soft ambient particles -->
+            <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+            <!-- Centered glowing portal orb -->
+            <div class="hero-orb-wrap" aria-hidden="true">
+                <div class="hero-orb">
+                    <div class="orb-ring orb-ring-1"></div>
+                    <div class="orb-ring orb-ring-2"></div>
+                    <div class="orb-core"></div>
+                    <div class="orb-flare"></div>
+                </div>
+            </div>
+
+            <!-- Floating letters (expanded for visual density) -->
+            <div class="hero-letters" id="hero-letters" aria-hidden="true">
+                <span class="float-letter fl-1" data-depth="0.03">S</span>
+                <span class="float-letter fl-2" data-depth="0.05">C</span>
+                <span class="float-letter fl-3" data-depth="0.04">R</span>
+                <span class="float-letter fl-4" data-depth="0.03">X</span>
+                <span class="float-letter fl-5" data-depth="0.02">A</span>
+                <span class="float-letter fl-6" data-depth="0.04">M</span>
+                <span class="float-letter fl-7" data-depth="0.03">B</span>
+                <span class="float-letter fl-8" data-depth="0.05">L</span>
+                <span class="float-letter fl-9" data-depth="0.02">O</span>
+            </div>
+
+            <div class="home-overlay"></div>
+
+
+
+
+            <!-- ===== Hero Main Content ===== -->
+            <div class="home-content">
+
+                <!-- Season Badge -->
+                <div class="hero-season-badge">
+                    <span class="hero-season-dot"></span>
+                    Season 3 &bull; Live Now
+                </div>
+
+                <h1 class="hero-title" id="hero-title"></h1>
+                <p class="hero-sub">Challenge your vocabulary. Race the clock. Dominate the leaderboard.</p>
+
+                <!-- Live Stats Strip -->
+                <div class="hero-live-stats">
+                    <div class="hero-stat-pill">
+                        <span class="hero-stat-dot hero-stat-dot--green"></span>
+                        <span class="hero-stat-value" id="hero-stat-players">2,481</span>
+                        <span class="hero-stat-label">Players Online</span>
+                    </div>
+                    <div class="hero-stat-pill">
+                        <span class="hero-stat-icon">🔥</span>
+                        <span class="hero-stat-value" id="hero-stat-words">14,209</span>
+                        <span class="hero-stat-label">Words Solved Today</span>
+                    </div>
+                    <div class="hero-stat-pill">
+                        <span class="hero-stat-icon">⏱️</span>
+                        <span class="hero-stat-value" id="hero-stat-daily">04:32:18</span>
+                        <span class="hero-stat-label">Daily Challenge Ends</span>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="btn-glow-wrap">
+                    <div class="btn-radial-glow"></div>
+                    <button id="enter-game-btn" class="enter-game-btn">ENTER GAME</button>
+                </div>
+
+                <!-- Game Mode Quick-Select Cards -->
+                <div class="hero-modes">
+                    <a href="play.html" class="hero-mode-card">
+                        <span class="hero-mode-icon">⚔️</span>
+                        <span class="hero-mode-name">Solo</span>
+                        <span class="hero-mode-desc">Challenge yourself</span>
+                    </a>
+                    <a href="duel.html" class="hero-mode-card">
+                        <span class="hero-mode-icon">🎮</span>
+                        <span class="hero-mode-name">Duel</span>
+                        <span class="hero-mode-desc">1v1 word battle</span>
+                    </a>
+                    <a href="leaderboard.html" class="hero-mode-card">
+                        <span class="hero-mode-icon">🏆</span>
+                        <span class="hero-mode-name">Ranked</span>
+                        <span class="hero-mode-desc">Climb the ladder</span>
+                    </a>
+                </div>
+
+                <!-- Scroll Down Indicator -->
+                <div class="hero-scroll-indicator" id="hero-scroll-indicator">
+                    <span class="hero-scroll-text">Scroll to explore</span>
+                    <div class="hero-scroll-chevrons">
+                        <svg class="hero-scroll-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="hero-scroll-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div id="dashboard-content">
+
+        <!-- How It Works -->
+        <section class="section how-it-works">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-row">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-heading">Pick a Difficulty</h3>
+                    <p class="step-desc">Choose Easy, Medium, or Hard — each level unlocks tougher words and shorter timers.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-heading">Unscramble & Submit</h3>
+                    <p class="step-desc">Rearrange the jumbled letters into the correct word before the clock runs out.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-heading">Climb the Ranks</h3>
+                    <p class="step-desc">Earn points, unlock achievements, and compete on the global leaderboard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Highlights -->
+        <section class="section features-section">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3 class="feature-name">3 Difficulty Levels</h3>
+                <p class="feature-text">Structured progression from basic vocabulary to advanced terms — suitable for all skill levels.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⏱️</span>
+                <h3 class="feature-name">Timed Challenges</h3>
+                <p class="feature-text">Race against the clock with real-time scoring, streak bonuses, and instant answer validation.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏆</span>
+                <h3 class="feature-name">Live Leaderboard</h3>
+                <p class="feature-text">Track high scores, compare rankings, and earn tier badges from Bronze to Diamond.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💬</span>
+                <h3 class="feature-name">Community Forum</h3>
+                <p class="feature-text">Discuss strategies, share tips, and connect with fellow word enthusiasts.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎖️</span>
+                <h3 class="feature-name">Achievements & Badges</h3>
+                <p class="feature-text">Unlock rewards for speed, accuracy, and consistency — showcase your earned titles.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">👑</span>
+                <h3 class="feature-name">Premium Word Packs</h3>
+                <p class="feature-text">Access advanced vocabulary sets and exclusive content to push your skills further.</p>
+            </div>
+            </div><!-- /.features-grid -->
+        </section>
+
+        </div><!-- /#dashboard-content -->
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+
+        <!-- CTA Section -->
+        <div class="footer-cta">
+            <h2 class="footer-cta-title">Join the Word Revolution</h2>
+            <div class="footer-cta-buttons">
+                <a href="#" class="cta-btn">
+                    <span class="cta-btn-icon">💬</span> Join Discord
+                </a>
+                <a href="#" class="cta-btn">
+                    <span class="cta-btn-icon">✖</span> Follow on X
+                </a>
+                <a href="#" class="cta-btn">
+                    <span class="cta-btn-icon">📨</span> Join Telegram
+                </a>
+                <a href="#" class="cta-btn">
+                    <span class="cta-btn-icon">📧</span> Subscribe
+                </a>
+            </div>
+        </div>
+
+        <!-- Large Branding Text -->
+        <div class="footer-branding">
+            <div class="footer-brand-text">SCRAMBLOX</div>
+        </div>
+
+        <!-- Info Bar -->
+        <div class="footer-bg">
+            <div class="footer-info">
+                <div class="footer-info-left">
+                    <span class="footer-logo">🎯</span>
+                    <span class="footer-tagline">Unscramble words, sharpen your mind, and rise through the ranks.</span>
+                </div>
+                <nav class="footer-links">
+                    <a href="play.html" class="footer-link">Solo Challenge</a>
+                    <a href="duel.html" class="footer-link">Duel Mode</a>
+                    <a href="leaderboard.html" class="footer-link">Leaderboard</a>
+                    <a href="forum.html" class="footer-link">Community</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </nav>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="footer-copyright">
+                <span class="footer-copy-text">© 2026 Scramblox. All rights reserved.</span>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social" aria-label="X / Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="footer-social" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="#" class="footer-social" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="footer-social" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Fluid Particles Cursor (Optimized — Lightweight) -->
+    <script>
+    (function() {
+        if ('ontouchstart' in window && !window.matchMedia('(pointer: fine)').matches) return;
+
+        var container = document.getElementById('particles-cursor');
+        if (!container) return;
+
+        var canvas = document.createElement('canvas');
+        canvas.style.willChange = 'contents';
+        container.appendChild(canvas);
+        var ctx = canvas.getContext('2d', { alpha: true });
+
+        var W, H, dpr;
+        function resize() {
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            canvas.style.width = W + 'px';
+            canvas.style.height = H + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        resize();
+        var resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resize, 200);
+        });
+
+        // --- PRE-CACHE glow sprites ---
+        var COLORS = [
+            [255, 100, 180],
+            [160, 120, 255],
+            [80, 210, 255],
+            [255, 80, 200],
+        ];
+        var SPRITE_SIZE = 48;
+        var sprites = [];
+
+        for (var c = 0; c < COLORS.length; c++) {
+            var sc = document.createElement('canvas');
+            sc.width = sc.height = SPRITE_SIZE;
+            var sctx = sc.getContext('2d');
+            var half = SPRITE_SIZE / 2;
+            var grad = sctx.createRadialGradient(half, half, 0, half, half, half);
+            var col = COLORS[c];
+            grad.addColorStop(0, 'rgba(' + Math.min(255, col[0]+60) + ',' + Math.min(255, col[1]+60) + ',' + Math.min(255, col[2]+60) + ',1)');
+            grad.addColorStop(0.2, 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',0.5)');
+            grad.addColorStop(1, 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',0)');
+            sctx.fillStyle = grad;
+            sctx.fillRect(0, 0, SPRITE_SIZE, SPRITE_SIZE);
+            sprites.push(sc);
+        }
+
+        // Mouse tracking
+        var mouse = { x: -1000, y: -1000, vx: 0, vy: 0, moving: false };
+        var running = false;
+        var moveTimer = null;
+        var lastMoveTime = 0;
+
+        document.addEventListener('mousemove', function(e) {
+            var now = performance.now();
+            // Throttle to ~60fps input
+            if (now - lastMoveTime < 16) return;
+            lastMoveTime = now;
+
+            var px = mouse.x, py = mouse.y;
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+            mouse.vx = mouse.x - px;
+            mouse.vy = mouse.y - py;
+            mouse.moving = true;
+            if (!running) startLoop();
+            clearTimeout(moveTimer);
+            moveTimer = setTimeout(function() { mouse.moving = false; }, 60);
+        });
+        document.addEventListener('mouseleave', function() { mouse.moving = false; });
+
+        // Particles — reduced pool to 120
+        var MAX = 120;
+        var pool = new Array(MAX);
+        var aliveCount = 0;
+
+        for (var i = 0; i < MAX; i++) {
+            pool[i] = { x:0, y:0, vx:0, vy:0, life:0, decay:0, size:0, ci:0, alive:false };
+        }
+
+        function spawn() {
+            for (var i = 0; i < MAX; i++) {
+                if (!pool[i].alive) {
+                    var p = pool[i];
+                    p.x = mouse.x + (Math.random() - 0.5) * 12;
+                    p.y = mouse.y + (Math.random() - 0.5) * 12;
+                    p.vx = mouse.vx * 0.25 + (Math.random() - 0.5) * 2;
+                    p.vy = mouse.vy * 0.25 + (Math.random() - 0.5) * 2;
+                    p.life = 1;
+                    p.decay = 0.012 + Math.random() * 0.018;
+                    p.size = 6 + Math.random() * 12;
+                    p.ci = Math.floor(Math.random() * COLORS.length);
+                    p.alive = true;
+                    aliveCount++;
+                    return;
+                }
+            }
+        }
+
+        var animId;
+        function animate() {
+            ctx.clearRect(0, 0, W, H);
+            ctx.globalCompositeOperation = 'lighter';
+
+            // Spawn fewer particles per frame
+            if (mouse.moving) {
+                var speed = Math.sqrt(mouse.vx * mouse.vx + mouse.vy * mouse.vy);
+                var count = Math.min(3, 1 + Math.floor(speed * 0.2));
+                for (var s = 0; s < count; s++) spawn();
+            }
+
+            aliveCount = 0;
+            for (var i = 0; i < MAX; i++) {
+                var p = pool[i];
+                if (!p.alive) continue;
+                aliveCount++;
+
+                p.vx *= 0.95;
+                p.vy *= 0.95;
+                p.x += p.vx;
+                p.y += p.vy;
+                p.life -= p.decay;
+
+                if (p.life <= 0) { p.alive = false; continue; }
+
+                var alpha = p.life * p.life;
+                var drawSize = p.size * (0.5 + p.life * 0.5);
+                ctx.globalAlpha = alpha;
+                ctx.drawImage(sprites[p.ci], p.x - drawSize, p.y - drawSize, drawSize * 2, drawSize * 2);
+            }
+            ctx.globalAlpha = 1;
+
+            if (aliveCount === 0) {
+                running = false;
+                ctx.clearRect(0, 0, W, H);
+                return;
+            }
+
+            animId = requestAnimationFrame(animate);
+        }
+
+        function startLoop() {
+            if (running) return;
+            running = true;
+            animate();
+        }
+    })();
+    </script>
+
+    <!-- Hero: Soft Ambient Particles + Mouse Parallax Letters (Perf-optimized) -->
+    <script>
+    (function () {
+        // ===== SOFT AMBIENT PARTICLES =====
+        var canvas = document.getElementById('hero-particles');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d', { alpha: true });
+        var W, H;
+
+        function resize() {
+            W = canvas.width = canvas.offsetWidth;
+            H = canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        var resizeTimer2;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer2);
+            resizeTimer2 = setTimeout(resize, 200);
+        });
+
+        // Reduced to 15 ambient particles
+        var TOTAL = 15;
+        var particles = [];
+
+        var COLORS = [
+            'rgba(200, 80, 140, ',
+            'rgba(160, 96, 192, ',
+            'rgba(96, 160, 224, ',
+        ];
+
+        for (var i = 0; i < TOTAL; i++) {
+            particles.push({
+                x: Math.random() * 2000,
+                y: Math.random() * 2000,
+                r: 1.5 + Math.random() * 2.5,
+                dx: (Math.random() - 0.5) * 0.25,
+                dy: -0.1 - Math.random() * 0.3,
+                alpha: 0.15 + Math.random() * 0.3,
+                pulse: Math.random() * Math.PI * 2,
+                pulseSpeed: 0.008 + Math.random() * 0.012,
+                ci: Math.floor(Math.random() * COLORS.length)
+            });
+        }
+
+        var heroVisible = true;
+        var particleRafId = null;
+        var parallaxRafId = null;
+
+        function drawParticles() {
+            if (!heroVisible) { particleRafId = null; return; }
+
+            ctx.clearRect(0, 0, W, H);
+
+            for (var i = 0; i < TOTAL; i++) {
+                var p = particles[i];
+                p.x += p.dx;
+                p.y += p.dy;
+                p.pulse += p.pulseSpeed;
+
+                if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
+                if (p.x < -10) p.x = W + 10;
+                if (p.x > W + 10) p.x = -10;
+
+                var a = p.alpha * (0.6 + 0.4 * Math.sin(p.pulse));
+
+                // Single draw per particle (no separate glow layer)
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = COLORS[p.ci] + a + ')';
+                ctx.fill();
+            }
+
+            particleRafId = requestAnimationFrame(drawParticles);
+        }
+
+        // ===== MOUSE PARALLAX FOR FLOATING LETTERS =====
+        var heroEl = document.getElementById('home');
+        var letters = document.querySelectorAll('.float-letter[data-depth]');
+        if (!heroEl || !letters.length) return;
+
+        var mx = 0, my = 0;
+        var cx = 0, cy = 0;
+        var parallaxDirty = false;
+
+        heroEl.addEventListener('mousemove', function (e) {
+            var rect = heroEl.getBoundingClientRect();
+            mx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+            my = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+            parallaxDirty = true;
+        });
+
+        heroEl.addEventListener('mouseleave', function () {
+            mx = 0;
+            my = 0;
+            parallaxDirty = true;
+        });
+
+        function parallaxLoop() {
+            if (!heroVisible) { parallaxRafId = null; return; }
+
+            cx += (mx - cx) * 0.04;
+            cy += (my - cy) * 0.04;
+
+            // Only write to DOM when there's actual motion
+            if (parallaxDirty || Math.abs(mx - cx) > 0.002 || Math.abs(my - cy) > 0.002) {
+                for (var i = 0; i < letters.length; i++) {
+                    var depth = parseFloat(letters[i].getAttribute('data-depth')) || 0.03;
+                    var shiftX = cx * depth * 800;
+                    var shiftY = cy * depth * 500;
+                    letters[i].style.setProperty('--px', shiftX + 'px');
+                    letters[i].style.setProperty('--py', shiftY + 'px');
+                }
+                parallaxDirty = false;
+            }
+
+            parallaxRafId = requestAnimationFrame(parallaxLoop);
+        }
+
+        // ===== IntersectionObserver: pause/resume when hero enters/leaves viewport =====
+        function startLoops() {
+            if (!particleRafId) { particleRafId = requestAnimationFrame(drawParticles); }
+            if (!parallaxRafId) { parallaxRafId = requestAnimationFrame(parallaxLoop); }
+            var fl = document.querySelectorAll('.float-letter');
+            for (var i = 0; i < fl.length; i++) fl[i].style.animationPlayState = 'running';
+        }
+
+        function stopLoops() {
+            if (particleRafId) { cancelAnimationFrame(particleRafId); particleRafId = null; }
+            if (parallaxRafId) { cancelAnimationFrame(parallaxRafId); parallaxRafId = null; }
+            var fl = document.querySelectorAll('.float-letter');
+            for (var i = 0; i < fl.length; i++) fl[i].style.animationPlayState = 'paused';
+        }
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                heroVisible = entries[0].isIntersecting;
+                if (heroVisible) startLoops();
+                else stopLoops();
+            }, { threshold: 0 });
+            observer.observe(heroEl);
+        }
+
+        startLoops();
+    })();
+    </script>
+
+</body>
+</html>

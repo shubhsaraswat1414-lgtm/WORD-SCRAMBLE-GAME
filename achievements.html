@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements — Scramblox</title>
+    <meta name="description" content="Track your achievements and unlock badges in Scramblox. Complete challenges to earn rewards.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="achievements.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-icon">🎯</span>
+            <div class="brand-text"><h2>Scramblox</h2><span class="brand-sub">Vocabulary Battle Hub</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span></a>
+            <a href="play.html" class="nav-item"><span class="nav-icon">⚔️</span><span class="nav-label">Solo Challenge</span></a>
+            <a href="duel.html" class="nav-item"><span class="nav-icon">🎮</span><span class="nav-label">Duel Mode</span></a>
+            <a href="leaderboard.html" class="nav-item"><span class="nav-icon">🏆</span><span class="nav-label">Leaderboard</span></a>
+            <a href="achievements.html" class="nav-item active"><span class="nav-icon">🎖️</span><span class="nav-label">Achievements</span></a>
+            <a href="forum.html" class="nav-item"><span class="nav-icon">💬</span><span class="nav-label">Community Forum</span></a>
+            <a href="settings.html" class="nav-item"><span class="nav-icon">⚙️</span><span class="nav-label">Settings</span></a>
+            <a href="premium.html" class="nav-item nav-premium"><span class="nav-icon">👑</span><span class="nav-label">Premium Access</span></a>
+        </nav>
+        <div class="sidebar-user">
+            <div class="user-avatar">G</div>
+            <div class="user-info"><span class="user-name">Guest Challenger</span><span class="user-rank">🥉 Bronze Tier</span></div>
+        </div>
+    </aside>
+    <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content">
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1 class="page-title">🎖️ Achievements</h1>
+            <p class="page-subtitle">Complete challenges to unlock badges and earn bonus rewards</p>
+        </section>
+
+        <!-- Progress Overview -->
+        <section class="section achievement-overview">
+            <h2 class="section-title">Your Progress</h2>
+            <div class="progress-stats">
+                <div class="progress-ring-container">
+                    <div class="progress-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="progress-bg" cx="60" cy="60" r="52"></circle>
+                            <circle class="progress-fill" cx="60" cy="60" r="52" stroke-dasharray="327" stroke-dashoffset="131"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="progress-percent">60%</span>
+                            <span class="progress-label">Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-details">
+                    <div class="progress-stat">
+                        <span class="progress-stat-value">9</span>
+                        <span class="progress-stat-label">Unlocked</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="progress-stat-value">6</span>
+                        <span class="progress-stat-label">Locked</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="progress-stat-value">3</span>
+                        <span class="progress-stat-label">Near Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unlocked Achievements -->
+        <section class="section">
+            <h2 class="section-title">Unlocked Badges</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card unlocked">
+                    <div class="achievement-badge">⚡</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Speed Demon</span>
+                        <span class="achievement-desc">Solve a word in under 3 seconds</span>
+                    </div>
+                    <span class="achievement-date">Earned today</span>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-badge">🔥</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">On Fire</span>
+                        <span class="achievement-desc">Get a 5-word win streak</span>
+                    </div>
+                    <span class="achievement-date">Earned yesterday</span>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-badge">📚</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Bookworm</span>
+                        <span class="achievement-desc">Solve 50 words total</span>
+                    </div>
+                    <span class="achievement-date">3 days ago</span>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-badge">🎯</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Sharp Shooter</span>
+                        <span class="achievement-desc">90% accuracy in a session</span>
+                    </div>
+                    <span class="achievement-date">1 week ago</span>
+                </div>
+                <div class="achievement-card unlocked">
+                    <div class="achievement-badge">⚔️</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Duel Champion</span>
+                        <span class="achievement-desc">Win 10 duels</span>
+                    </div>
+                    <span class="achievement-date">1 week ago</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locked Achievements -->
+        <section class="section">
+            <h2 class="section-title">Locked — Keep Going!</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card locked">
+                    <div class="achievement-badge locked-badge">🏔️</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Summit Seeker</span>
+                        <span class="achievement-desc">Reach the top 10 on leaderboard</span>
+                    </div>
+                    <div class="achievement-progress">
+                        <div class="achievement-bar">
+                            <div class="achievement-bar-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="achievement-progress-text">75%</span>
+                    </div>
+                </div>
+                <div class="achievement-card locked">
+                    <div class="achievement-badge locked-badge">💎</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Diamond Mind</span>
+                        <span class="achievement-desc">Reach Diamond tier</span>
+                    </div>
+                    <div class="achievement-progress">
+                        <div class="achievement-bar">
+                            <div class="achievement-bar-fill" style="width: 30%"></div>
+                        </div>
+                        <span class="achievement-progress-text">30%</span>
+                    </div>
+                </div>
+                <div class="achievement-card locked">
+                    <div class="achievement-badge locked-badge">🌟</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Vocabulary Legend</span>
+                        <span class="achievement-desc">Solve 500 words total</span>
+                    </div>
+                    <div class="achievement-progress">
+                        <div class="achievement-bar">
+                            <div class="achievement-bar-fill" style="width: 10%"></div>
+                        </div>
+                        <span class="achievement-progress-text">10%</span>
+                    </div>
+                </div>
+                <div class="achievement-card locked">
+                    <div class="achievement-badge locked-badge">🎭</div>
+                    <div class="achievement-info">
+                        <span class="achievement-name">Polymorphist</span>
+                        <span class="achievement-desc">Solve all Hard difficulty words</span>
+                    </div>
+                    <div class="achievement-progress">
+                        <div class="achievement-bar">
+                            <div class="achievement-bar-fill" style="width: 45%"></div>
+                        </div>
+                        <span class="achievement-progress-text">45%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="stats.js"></script>
+    <script src="achievements-app.js"></script>
+</body>
+</html>

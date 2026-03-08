@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Challenge — Scramblox</title>
+    <meta name="description" content="Test your vocabulary skills in Solo Challenge mode. Choose your difficulty and unscramble words against the clock.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="play.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-icon">🎯</span>
+            <div class="brand-text"><h2>Scramblox</h2><span class="brand-sub">Vocabulary Battle Hub</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span></a>
+            <a href="play.html" class="nav-item active"><span class="nav-icon">⚔️</span><span class="nav-label">Solo Challenge</span></a>
+            <a href="duel.html" class="nav-item"><span class="nav-icon">🎮</span><span class="nav-label">Duel Mode</span></a>
+            <a href="leaderboard.html" class="nav-item"><span class="nav-icon">🏆</span><span class="nav-label">Leaderboard</span></a>
+            <a href="achievements.html" class="nav-item"><span class="nav-icon">🎖️</span><span class="nav-label">Achievements</span></a>
+            <a href="forum.html" class="nav-item"><span class="nav-icon">💬</span><span class="nav-label">Community Forum</span></a>
+            <a href="settings.html" class="nav-item"><span class="nav-icon">⚙️</span><span class="nav-label">Settings</span></a>
+            <a href="premium.html" class="nav-item nav-premium"><span class="nav-icon">👑</span><span class="nav-label">Premium Access</span></a>
+        </nav>
+        <div class="sidebar-user">
+            <div class="user-avatar">G</div>
+            <div class="user-info"><span class="user-name">Guest Challenger</span><span class="user-rank">🥉 Bronze Tier</span></div>
+        </div>
+    </aside>
+    <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+
+
+    <!-- ===== Main Content ===== -->
+    <main id="main-content" class="game-arena">
+
+        <!-- Floating Decorative Icons -->
+        <div class="game-deco deco-1">🧪</div>
+        <div class="game-deco deco-2">📖</div>
+        <div class="game-deco deco-3">✨</div>
+        <div class="game-deco deco-4">🔮</div>
+        <div class="game-deco deco-5">🗝️</div>
+        <div class="game-deco deco-6">⭐</div>
+
+        <!-- Top Bar — Coins, Level, Timer -->
+        <div class="game-top-bar">
+            <div class="game-coin-badge">
+                <span class="coin-icon">🪙</span>
+                <span id="score" class="coin-count">0</span>
+            </div>
+            <div class="game-level-badge">
+                <span class="level-label">LEVEL</span>
+                <span id="game-level" class="level-value">1</span>
+            </div>
+            <div id="timer-badge" class="game-timer-badge">
+                <span class="timer-icon">⏳</span>
+                <span id="timer" class="timer-value">30</span>
+            </div>
+        </div>
+
+        <!-- Game Board — Wooden Plank Style -->
+        <div class="game-board">
+            <div class="board-nails">
+                <span class="nail"></span>
+                <span class="nail"></span>
+                <span class="nail"></span>
+                <span class="nail"></span>
+            </div>
+
+            <!-- Difficulty Selector as Game Tabs -->
+            <div class="game-diff-tabs">
+                <button class="diff-tab active" data-diff="easy" id="tab-easy">🟢 Easy</button>
+                <button class="diff-tab" data-diff="medium" id="tab-medium">🟡 Medium</button>
+                <button class="diff-tab diff-tab-champion" data-diff="hard" id="tab-hard">
+                    � Hard
+                    <span class="diff-champion-badge">👑 Champion</span>
+                </button>
+            </div>
+
+            <!-- Scrambled Word — Parchment Style -->
+            <div class="parchment-panel">
+                <div class="parchment-top-decor">🏰</div>
+                <p id="scrambled-word" class="scrambled-letters">— — —</p>
+                <span class="parchment-hint">✨ Unscramble the enchanted letters ✨</span>
+                <!-- Solution reveal (shown on skip) -->
+                <div id="solution-reveal" class="solution-reveal">
+                    <span class="solution-label">Answer:</span>
+                    <span id="solution-word" class="solution-word"></span>
+                </div>
+            </div>
+
+            <!-- Answer Input Area -->
+            <div class="game-input-area">
+                <input type="text" id="answer-input" class="game-input" placeholder="Type your answer..." autocomplete="off">
+            </div>
+
+            <!-- Game Action Buttons -->
+            <div class="game-buttons">
+                <button id="submit-btn" class="game-btn btn-submit">
+                    ⚡ SUBMIT
+                </button>
+                <button id="solution-btn" class="game-btn btn-solution">
+                    💡 SOLUTION
+                </button>
+                <button id="skip-btn" class="game-btn btn-skip">
+                    ⏭️ SKIP
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Bar — Streak & Words Found -->
+        <div class="game-stats-bar">
+            <div class="game-stat">
+                <span class="gstat-icon">🔥</span>
+                <div class="gstat-info">
+                    <span class="gstat-value" id="streak">0</span>
+                    <span class="gstat-label">Streak</span>
+                </div>
+            </div>
+            <div class="game-stat">
+                <span class="gstat-icon">⚡</span>
+                <div class="gstat-info">
+                    <span class="gstat-value" id="best-streak">0</span>
+                    <span class="gstat-label">Best Streak</span>
+                </div>
+            </div>
+            <div class="game-stat">
+                <span class="gstat-icon">🎯</span>
+                <div class="gstat-info">
+                    <span class="gstat-value" id="words-found">0</span>
+                    <span class="gstat-label">Words Found</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Panel — Recent Words Found -->
+        <div class="scroll-panel">
+            <div class="scroll-header">
+                <span class="scroll-decor-left">📜</span>
+                <h3 class="scroll-title">Words Found</h3>
+                <span class="scroll-decor-right">📜</span>
+            </div>
+            <div class="scroll-body" id="found-words-list">
+                <p class="scroll-body-empty">Start playing to see your solved words here!</p>
+            </div>
+        </div>
+
+        <!-- New Match / End Game Buttons -->
+        <div class="new-match-row">
+            <button id="restart-btn" class="game-btn btn-new-match">
+                🎮 NEW MATCH
+            </button>
+            <button id="end-game-btn" class="game-btn btn-end-game">
+                🏁 END GAME
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== Game Over Overlay ===== -->
+    <div class="game-over-overlay" id="game-over-overlay">
+        <div class="game-over-card">
+            <h2 class="go-title">⏰ Time's Up!</h2>
+            <div class="go-stats">
+                <div class="go-stat">
+                    <span class="go-stat-value" id="go-score">0</span>
+                    <span class="go-stat-label">Score</span>
+                </div>
+                <div class="go-stat">
+                    <span class="go-stat-value" id="go-words">0</span>
+                    <span class="go-stat-label">Words</span>
+                </div>
+                <div class="go-stat">
+                    <span class="go-stat-value" id="go-streak">0</span>
+                    <span class="go-stat-label">Best Streak</span>
+                </div>
+            </div>
+            <p class="go-last-word" id="go-last-word"></p>
+            <p class="go-highscore" id="go-highscore"></p>
+            <div class="go-actions">
+                <button class="game-btn btn-play-again" id="play-again-btn">🎮 PLAY AGAIN</button>
+                <a href="achievements.html" class="game-btn btn-achievements">🎖️ ACHIEVEMENTS</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Word database (must load before game.js) -->
+    <script src="words.js"></script>
+    <!-- Stats tracker (must load before game.js) -->
+    <script src="stats.js"></script>
+    <!-- Game logic -->
+    <script src="game.js"></script>
+
+</body>
+</html>
