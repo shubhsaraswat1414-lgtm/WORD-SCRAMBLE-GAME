@@ -68,6 +68,8 @@ Some features planned for future versions:
 📚 Larger vocabulary database
 🎵 Advanced game sound effects
 
+Deployment link- https://word-scramble-game-gbwn-gs1i5vra8.vercel.app/
+
 👨‍💻 Author
 
 Shubh Saraswat
